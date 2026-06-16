@@ -23,7 +23,7 @@ export default function App() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       setResult(await res.json())
     } catch {
-      setError('Could not reach backend — is uvicorn running?')
+      setError('Could not reach the backend. It may be waking up — try again in a moment.')
     } finally {
       setLoading(false)
     }
