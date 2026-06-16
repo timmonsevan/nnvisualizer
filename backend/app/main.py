@@ -8,7 +8,10 @@ from app.preprocess import preprocess_image
 
 app = FastAPI()
 
-_origins = os.environ.get("ALLOWED_ORIGINS", "http://evantimmons.space").split(",")
+_origins = os.environ.get(
+    "ALLOWED_ORIGINS",
+    "https://evantimmons.space,http://localhost:5173",
+).split(",")
 
 app.add_middleware(
     CORSMiddleware,
