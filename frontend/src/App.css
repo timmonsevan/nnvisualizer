@@ -1,0 +1,149 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── Top panel: canvas left, prediction right ── */
+.top-panel {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.canvas-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+button {
+  padding: 7px 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #ff7070;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* ── Prediction bar ── */
+.prediction-bar {
+  flex: 1;
+  min-height: 280px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+}
+
+.prediction-bar.state-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+}
+
+.big-digit {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.digit-num {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffd700;
+}
+
+.digit-conf {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.bar-label {
+  width: 14px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-row.winner .bar-label {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 5px;
+  transition: width 0.25s ease;
+}
+
+.bar-row.winner .bar-fill {
+  background: #ffd700;
+}
+
+.bar-pct {
+  width: 40px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Network SVG ── */
+.network-svg {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+}
