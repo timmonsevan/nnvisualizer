@@ -14,7 +14,8 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('http://localhost:8000/predict', {
+      const API = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
+      const res = await fetch(`${API}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: dataUrl }),
