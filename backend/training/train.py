@@ -1,10 +1,7 @@
 """
 Offline training script — run once to generate app/weights.npz.
 Extra deps (not in requirements.txt): torch torchvision
-    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-
-Usage (from backend/):
-    python -m training.train
+Usage (from backend/): python -m training.train
 """
 
 import numpy as np
